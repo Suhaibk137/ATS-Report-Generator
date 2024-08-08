@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Analysis Report Form</title>
+    <link rel="stylesheet" href="form-style.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>ATS Analysis Report Form</h1>
+        <form id="atsForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="strength">Profile Strength:</label>
+            <select id="strength" name="strength" required>
+                <option value="strong">Strong</option>
+                <option value="medium">Medium</option>
+                <option value="average">Average</option>
+                <option value="below-average">Below Average</option>
+            </select><br><br>
+            <label for="keywords">Keywords:</label>
+            <div id="editor-container"></div><br><br>
+            <label for="keywordsPresent">Keywords Present %:</label>
+            <input type="number" id="keywordsPresent" name="keywordsPresent" min="0" max="100" required><br><br>
+            <label for="keywordsNotPresent">Keywords Not Present %:</label>
+            <input type="number" id="keywordsNotPresent" name="keywordsNotPresent" min="0" max="100" required><br><br>
+            <h2>ATS Parameters</h2>
+            <label for="graphicContent">Graphic Content %:</label>
+            <input type="number" id="graphicContent" name="graphicContent" min="0" max="100" required><br><br>
+            <label for="fontStyle">Font Style:</label>
+            <select id="fontStyle" name="fontStyle" required>
+                <option value="pass">Pass</option>
+                <option value="fail">Fail</option>
+            </select><br><br>
+            <label for="fontSize">Font Size:</label>
+            <select id="fontSize" name="fontSize" required>
+                <option value="pass">Pass</option>
+                <option value="fail">Fail</option>
+            </select><br><br>
+            <label for="margins">Margins:</label>
+            <select id="margins" name="margins" required>
+                <option value="pass">Pass</option>
+                <option value="fail">Fail</option>
+            </select><br><br>
+            <label for="contentSize">Content Size (characters):</label>
+            <input type="number" id="contentSize" name="contentSize" required><br><br>
+            <h2>ATS Score</h2>
+            <label for="atsScoreMin">ATS Score Minimum:</label>
+            <input type="number" id="atsScoreMin" name="atsScoreMin" required><br><br>
+            <label for="atsScoreMax">ATS Score Maximum:</label>
+            <input type="number" id="atsScoreMax" name="atsScoreMax" required><br><br>
+            <button type="submit">Generate Report</button>
+        </form>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Analysis Report</title>
+    <link rel="stylesheet" href="template-style.css">
+</head>
+<body>
+    <div class="container" id="report">
+        <h1>ATS Report</h1>
+        <p><strong>Name:</strong> <span id="reportName">John Doe</span></p>
+        <p><strong>Email:</strong> <span id="reportEmail">johndoe@example.com</span></p>
+        <h2>Profile Strength</h2>
+        <div class="meter">
+            <div class="fill" id="fill"></div>
+        </div>
+        <p><strong>Strength:</strong> <span id="reportStrength" class="strength"></span></p>
+        <h2>Keyword Presence on Resume</h2>
+        <p><strong>Keywords:</strong> <span id="reportKeywords"></span></p>
+
+        <!-- Page break to move chart to the next page -->
+        <div class="page-break"></div>
+
+        <h2>ATS Keywords Presence</h2>
+        <canvas id="keywordsChart"></canvas>
+        <h2>ATS Parameters Check on Resume</h2>
+        <p><strong>Graphic Content:</strong> <span id="reportGraphicContent"></span></p>
+        <p><strong>Font Style:</strong> <span id="reportFontStyle"></span></p>
+        <p><strong>Font Size:</strong> <span id="reportFontSize"></span></p>
+        <p><strong>Margins:</strong> <span id="reportMargins"></span></p>
+        <p><strong>Content Size:</strong> <span id="reportContentSize"></span></p>
+        <h2>ATS Score</h2>
+        <p id="atsScoreParagraph"></p>
+    </div>
+    <button id="download">Download PDF</button>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
